@@ -340,7 +340,7 @@ def main(path):
                 conditioning_variable = to_categorical(conditioning_variable, num_classes=6)
 
                 g_curr = adversarial.train_on_batch([latent_space, conditioning_variable], [1]*batch_size)
-                    print(f'Gen_loss:{g_curr}\nDisc_loss:{d_curr}')
+                print(f'Gen_loss:{g_curr}\nDisc_loss:{d_curr}')
 
             if epoch % 10 == 0:
                 mini_batch = loaded_images[:batch_size]

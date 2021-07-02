@@ -242,7 +242,9 @@ def load_images(path, image_paths, shape):
     """Returns all the images as a variable of concatenated arrays.
     """
     image_ = None
+    print("Total number of images: ", len(image_paths))
     for i, image_path in enumerate(image_paths):
+        print("From ", i, " to ", len(image_paths))
         try:
             image = tf.keras.preprocessing.image.load_img(os.path.join(path, image_path),
                         target_size=shape)
